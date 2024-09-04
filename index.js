@@ -6,8 +6,8 @@ const cors = require("cors");
 app.use(cors());
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
-const db = require("../server/conn/dbConn");
-const contactRoute = require("../server/routes/contactRoute");
+const db = require("./conn/dbConn");
+const contactRoute = require("./routes/contactRoute");
 app.use("/api/contact", contactRoute);
 
 app.get("/", async (req, res) => {
